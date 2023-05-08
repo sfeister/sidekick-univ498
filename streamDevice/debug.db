@@ -1,0 +1,12 @@
+record(stringin,"DEBUG:info"){
+    field (DESC, "Get information about the device")
+	field(DTYP,"stream")
+	field(INP,"@debug.proto info debug_ino")
+    field(SCAN, "10 second")
+    field(PINI, "YES")
+}
+
+record(stringin,"DEBUG:debug"){
+	field(DTYP,"stream")
+	field(INP,"@debug.proto debug debug_ino")
+}
