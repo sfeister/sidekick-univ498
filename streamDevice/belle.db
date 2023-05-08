@@ -6,6 +6,13 @@ record(stringin,"BELLE:info"){
     field(PINI, "YES")
 }
 
+record(bo,"BELLE:BUZZ:ON"){
+	field(DTYP,"stream")
+	field(ZNAM,"False")
+	field(ONAM,"True")
+    field(OUT,"@belle.proto setBuzz belle_ino")
+    }
+
 record(stringin,"BELLE:debug"){
 	field(DTYP,"stream")
 	field(INP,"@belle.proto debug belle_ino")

@@ -8,6 +8,11 @@ info {
 	out "*IDN?";
 	in "%39c";
 }
+
+setBuzz {
+	ExtraInput = Ignore;
+	out "BUZZ:ON %u";
+}
     
 debug {
    ExtraInput = Ignore;

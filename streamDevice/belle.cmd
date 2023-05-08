@@ -6,7 +6,7 @@ streamApp_registerRecordDeviceDriver
 epicsEnvSet "STREAM_PROTOCOL_PATH","."
 
 drvAsynSerialPortConfigure("belle_ino","/dev/ttyUSB-arduino1.1")
-asynSetOption("belle_ino",0,"baud","115200")
+asynSetOption("belle_ino",0,"baud","9600")
 asynSetOption("belle_ino",0,"bits","8")
 asynSetOption("belle_ino",0,"parity","none")
 asynSetOption("belle_ino",0,"stop","1")
