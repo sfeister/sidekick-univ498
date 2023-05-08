@@ -1,12 +1,19 @@
-record(stringin,"BELLE:info"){
+record(stringin,"ALEX:info"){
     field (DESC, "Get information about the device")
 	field(DTYP,"stream")
-	field(INP,"@belle.proto info belle_ino")
+	field(INP,"@alex.proto info alex_ino")
     field(SCAN, "10 second")
     field(PINI, "YES")
 }
 
-record(stringin,"BELLE:debug"){
+record(longout,"ALEX:POS:CYCLE"){
 	field(DTYP,"stream")
-	field(INP,"@belle.proto debug belle_ino")
+	field(DRVL,"0")
+	field(DRVH,"30")  
+	field(OUT,"@alex.proto setCycle alex_ino")
+}
+
+record(stringin,"ALEX:debug"){
+	field(DTYP,"stream")
+	field(INP,"@alex.proto debug alex_ino")
 }

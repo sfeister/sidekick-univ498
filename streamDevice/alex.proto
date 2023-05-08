@@ -1,14 +1,19 @@
-# Belle's Sidekick EPICS protocol file
+# Alex's Sidekick EPICS protocol file
 # Built by examining examples at: https://paulscherrerinstitute.github.io/StreamDevice/protocol.html#gen
 
-Terminator = CR LF;
+Terminator = LF;
 
 info {
 	ExtraInput = Ignore;
 	out "*IDN?";
 	in "%39c";
 }
-    
+
+setCycle {
+	ExtraInput = Ignore;
+	out "POS:CYC %u";
+}
+
 debug {
    ExtraInput = Ignore;
    out "%s";
