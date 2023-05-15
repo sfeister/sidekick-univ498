@@ -6,11 +6,24 @@ record(stringin,"ALEX:info"){
     field(PINI, "YES")
 }
 
-record(longout,"ALEX:POS:CYCLE"){
+record(longout,"ALEX:POS:CYCLE:set"){
 	field(DTYP,"stream")
 	field(DRVL,"0")
 	field(DRVH,"30")  
-	field(OUT,"@alex.proto setCycle alex_ino")
+	field(OUT,"@alex.proto PositionCycle alex_ino")
+}
+
+record(longout,"ALEX:POS:set"){
+	field(DTYP,"stream")
+	field(DRVL,"0")
+	field(DRVH,"3")
+	field(OUT,"@alex.proto PositionSet alex_ino")
+}
+
+record(longin,"ALEX:POS:get"){
+	field(DTYP,"stream")
+    field(SCAN,"1 second")
+	field(INP,"@alex.proto PositionGet alex_ino")
 }
 
 record(stringin,"ALEX:debug"){

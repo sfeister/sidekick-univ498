@@ -9,13 +9,21 @@ info {
 	in "%39c";
 }
 
-setCycle {
-	ExtraInput = Ignore;
-	out "POS:CYC %u";
-}
-
 debug {
    ExtraInput = Ignore;
    out "%s";
    in "%39c";
+}
+
+PositionCycle {
+	out "POSition:CYCle %i";
+}
+
+PositionSet {
+	out "POSition:SET %i";
+}
+
+PositionGet {
+	out "POSition:GET";
+    in "%i";
 }

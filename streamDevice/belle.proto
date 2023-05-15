@@ -9,13 +9,28 @@ info {
 	in "%39c";
 }
 
-setBuzz {
-	ExtraInput = Ignore;
-	out "BUZZ:ON %u";
-}
-    
 debug {
    ExtraInput = Ignore;
    out "%s";
    in "%39c";
+}
+
+BuzzerQ {
+	out "BUZZer:ON?";
+    in "%i";
+}
+
+Buzzer {
+	out "BUZZer:ON %i";
+    @init { BuzzerQ; }
+}
+
+BuzzerFrequencyQ {
+	out "BUZZer:FREQuency?";
+    in "%u";
+}
+
+BuzzerFrequency {
+	out "BUZZer:FREQuency %u";
+    @init { BuzzerFrequencyQ; }
 }

@@ -1,12 +1,12 @@
-record(stringin,"BELLE:info"){
+record(stringin,"BENNETT:info"){
     field (DESC, "Get information about the device")
 	field(DTYP,"stream")
-	field(INP,"@belle.proto info belle_ino")
+	field(INP,"@bennett.proto info bennett_ino")
     field(SCAN, "10 second")
     field(PINI, "YES")
 }
 
-record(stringin,"BELLE:debug"){
+record(stringin,"BENNETT:debug"){
 	field(DTYP,"stream")
-	field(INP,"@belle.proto debug belle_ino")
+	field(INP,"@bennett.proto debug bennett_ino")
 }

@@ -1,4 +1,4 @@
-# Belle's Sidekick EPICS protocol file
+# Bennett's Sidekick EPICS protocol file
 # Built by examining examples at: https://paulscherrerinstitute.github.io/StreamDevice/protocol.html#gen
 
 Terminator = CR LF;
@@ -8,9 +8,45 @@ info {
 	out "*IDN?";
 	in "%39c";
 }
-    
+
 debug {
    ExtraInput = Ignore;
    out "%s";
    in "%39c";
+}
+
+# Queryable and settable
+SpeakerShutdownQ {
+    out "SPEAker:SHUTdown?";
+    in "%i";
+}
+
+SpeakerShutdown {
+    out "SPEAker:SHUTdown %i";
+    @init { SpeakerShutdownQ; }
+}
+
+SpeakerMuteQ {
+    out "SPEAker:MUTE?";
+    in "%i";
+}
+
+SpeakerMute {
+    out "SPEAker:MUTE %i";
+    @init { SpeakerMuteQ; }
+}
+
+SpeakerVolumeQ {
+    out "SPEAker:VOLume?";
+    in "%u";
+}
+
+SpeakerVolume {
+    out "SPEAker:VOLume %u";
+    @init { SpeakerVolumeQ; }
+}
+
+# Settable only
+SpeakerPlay {
+    out "SPEAker:PLAY";
 }

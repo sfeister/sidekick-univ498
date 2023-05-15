@@ -6,11 +6,30 @@ record(stringin,"BELLE:info"){
     field(PINI, "YES")
 }
 
-record(bo,"BELLE:BUZZ:ON"){
+record(bo,"BELLE:BUZZ:ON:set"){
 	field(DTYP,"stream")
 	field(ZNAM,"False")
 	field(ONAM,"True")
-    field(OUT,"@belle.proto setBuzz belle_ino")
+    field(OUT,"@belle.proto Buzzer belle_ino")
+    }
+
+record(bi,"BELLE:BUZZ:ON:get"){
+	field(DTYP,"stream")
+    field(SCAN,"1 second")
+	field(ZNAM,"False")
+	field(ONAM,"True")
+    field(INP,"@belle.proto BuzzerQ belle_ino")
+    }
+
+record(ao,"BELLE:BUZZ:FREQ:set"){
+	field(DTYP,"stream")
+    field(OUT,"@belle.proto BuzzerFrequency belle_ino")
+    }
+
+record(ai,"BELLE:BUZZ:FREQ:get"){
+	field(DTYP,"stream")
+    field(SCAN,"1 second")
+    field(INP,"@belle.proto BuzzerFrequencyQ belle_ino")
     }
 
 record(stringin,"BELLE:debug"){
