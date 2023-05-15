@@ -24,6 +24,6 @@ PositionSet {
 }
 
 PositionGet {
-	out "POSition:GET";
+	out "POSition:GET?";
     in "%i";
 }
