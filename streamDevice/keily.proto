@@ -1,4 +1,4 @@
-# Belle's Sidekick EPICS protocol file
+# Keily's Sidekick EPICS protocol file
 # Built by examining examples at: https://paulscherrerinstitute.github.io/StreamDevice/protocol.html#gen
 
 Terminator = CR LF;
@@ -8,9 +8,18 @@ info {
 	out "*IDN?";
 	in "%39c";
 }
-    
+
 debug {
    ExtraInput = Ignore;
    out "%s";
    in "%39c";
+}
+
+DisplayOnQ {
+	out "DISPlay:ON?";
+    in "%i";
+}
+
+DisplayText {
+	out "DISPlay:TEXT %s";
 }

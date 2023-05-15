@@ -1,12 +1,24 @@
-record(stringin,"BELLE:info"){
+record(stringin,"KEILY:info"){
     field (DESC, "Get information about the device")
 	field(DTYP,"stream")
-	field(INP,"@belle.proto info belle_ino")
+	field(INP,"@keily.proto info keily_ino")
     field(SCAN, "10 second")
     field(PINI, "YES")
 }
 
-record(stringin,"BELLE:debug"){
+record(stringin,"KEILY:debug"){
 	field(DTYP,"stream")
-	field(INP,"@belle.proto debug belle_ino")
+	field(INP,"@keily.proto debug keily_ino")
+}
+
+record(stringout,"KEILY:DISP:TEXT:set"){
+	field(DTYP,"stream")
+	field(OUT,"@keily.proto DisplayText keily_ino")
+}
+
+record(bi,"KEILY:DISP:ON:get"){
+	field(DTYP,"stream")
+	field(ZNAM,"Off")
+	field(ONAM,"On")
+	field(INP,"@keily.proto DisplayOnQ keily_ino")
 }
