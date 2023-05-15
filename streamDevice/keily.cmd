@@ -5,7 +5,7 @@ streamApp_registerRecordDeviceDriver
 
 epicsEnvSet "STREAM_PROTOCOL_PATH","."
 
-drvAsynSerialPortConfigure("keily_ino","/dev/ttyUSB-arduino1")
+drvAsynSerialPortConfigure("keily_ino","/dev/ttyUSB-arduino1.3")
 asynSetOption("keily_ino",0,"baud","9600")
 asynSetOption("keily_ino",0,"bits","8")
 asynSetOption("keily_ino",0,"parity","none")
