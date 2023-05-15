@@ -1,14 +1,34 @@
-# Belle's Sidekick EPICS protocol file
+# Andrew's Sidekick EPICS protocol file
 # Built by examining examples at: https://paulscherrerinstitute.github.io/StreamDevice/protocol.html#gen
 
-Terminator = CR LF;
+Terminator = LF;
 
 info {
 	ExtraInput = Ignore;
 	out "*IDN?";
 	in "%39c";
 }
-    
+
+Slider1 {
+    in  "Slider 1: %i";
+}
+
+Slider2 {
+    in  "Slider 2: %i";
+}
+
+Slider3 {
+    in  "Slider 3: %i";
+}
+
+ButtonA {
+    in  "Button A %{released|pressed}";
+}
+
+ButtonB {
+    in  "Button B %{released|pressed}";
+}
+
 debug {
    ExtraInput = Ignore;
    out "%s";

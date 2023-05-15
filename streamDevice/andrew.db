@@ -1,12 +1,51 @@
-record(stringin,"BELLE:info"){
+record(stringin,"ANDREW:info"){
     field (DESC, "Get information about the device")
 	field(DTYP,"stream")
-	field(INP,"@belle.proto info belle_ino")
+	field(INP,"@andrew.proto info andrew_ino")
     field(SCAN, "10 second")
     field(PINI, "YES")
 }
 
-record(stringin,"BELLE:debug"){
+record(longin,"ANDREW:SLIDER1"){
 	field(DTYP,"stream")
-	field(INP,"@belle.proto debug belle_ino")
+    field(SCAN,"I/O Intr")
+	field(INP,"@andrew.proto Slider1 andrew_ino")
+    field(PINI, "NO")
+}
+
+record(longin,"ANDREW:SLIDER2"){
+	field(DTYP,"stream")
+    field(SCAN,"I/O Intr")
+	field(INP,"@andrew.proto Slider2 andrew_ino")
+    field(PINI, "NO")
+}
+
+record(longin,"ANDREW:SLIDER3"){
+	field(DTYP,"stream")
+    field(SCAN,"I/O Intr")
+	field(INP,"@andrew.proto Slider3 andrew_ino")
+    field(PINI, "NO")
+}
+
+record(bi,"ANDREW:BUTTONA"){
+	field(DTYP,"stream")
+    field(SCAN,"I/O Intr")
+	field(ZNAM,"released")
+	field(ONAM,"pressed")
+	field(INP,"@andrew.proto ButtonA andrew_ino")
+    field(PINI, "NO")
+}
+
+record(bi,"ANDREW:BUTTONB"){
+	field(DTYP,"stream")
+    field(SCAN,"I/O Intr")
+	field(ZNAM,"released")
+	field(ONAM,"pressed")
+	field(INP,"@andrew.proto ButtonB andrew_ino")
+    field(PINI, "NO")
+}
+
+record(stringin,"ANDREW:debug"){
+	field(DTYP,"stream")
+	field(INP,"@andrew.proto debug andrew_ino")
 }
